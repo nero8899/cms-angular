@@ -1,0 +1,25 @@
+{
+  "name": "supervisor",
+  "main": "supervisor.js",
+  "version": "0.0.3",
+  "authors": [
+    "Pieter Beulque <pieter@mrhenry.be>"
+  ],
+  "description": "A manager that conditionally loads, destroys or does anything else to your Javascript modules",
+  "keywords": [
+    "conditional",
+    "loading",
+    "module",
+    "manager",
+    "supervisor"
+  ],
+  "license": "GPL",
+  "homepage": "https://github.com/mrhenry/supervisor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Changer – A Supervisor Demo</title>
+</head>
+<body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="supervisor.js"></script>
+  <script src="color-changer.js"></script>
+  <script>
+    window.onload = function () {
+      var supervisor = new Supervisor();
+
+      supervisor.manage(
+        'color-changer',
+        function () { return window.innerWidth > 480; },
+        [
+          function () { return window.innerWidth > 1280; },
+          function () { return window.innerWidth > 1024; },
+          function () { return window.innerWidth > 768; }
+        ],
+        {
+          init: function (moduleName, module) {
+            console.info('Supervisor called init');
+            module.instance = new ColorChanger();
+            module.instance.changeColor(module.state);
+          },
+          destroy: function (moduleName, module) {
+            console.info('Supervisor called destroy');
+            module.instance.destroy();
+            module.instance = null;
+          },
+          update: function (moduleName, module) {
+            console.info('Supervisor called update');
+            module.instance.changeColor(module.state);
+          }
+        }
+      );
+
+      supervisor.check();
+    };
+  </script>
+</body>
+</html>
