@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="APP">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <link href="app.less" type="text/css" rel="stylesheet/less">
+    <link href="bower_components/AdminLTE/dist/css/AdminLTE.min.css" type="text/css" rel="stylesheet/less">
+    <link href="bower_components/AdminLTE/dist/css/skins/skin-green-light.css" type="text/css" rel="stylesheet/less">
+</head>
+<body class="skin-green-light">
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <!-- JS from Bower Components -->
+  <script src="bower_components/less.js/dist/less.js" data-concat="false"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/AdminLTE/dist/js/app.min.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="partial/projects/projects.js"></script>
+  <script src="partial/blog/blog.js"></script>
+  <script src="partial/blog/blog.js"></script>
+  <script src="service/projects-service.js"></script>
+  <script src="partial/new-project/new-project.js"></script>
+  <script src="partial/edit-project/edit-project.js"></script>
+  <!-- Add New Component JS Above -->
+
+  <div>
+      <header class="main-header">
+          <a class="logo">
+              <!-- LOGO -->
+              Nermin's CMS
+          </a>
+          <!-- Header Navbar: style can be found in header.less -->
+          <nav class="navbar navbar-static-top" role="navigation">
+              <!-- Navbar Right Menu -->
+              <div class="navbar-custom-menu">
+              </div>
+          </nav>
+      </header>
+      <!-- Sidebar -->
+      <div class="main-sidebar">
+          <!-- Inner sidebar -->
+          <div class="sidebar">
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu">
+                  <li class="header"></li>
+                  <!-- Optionally, you can add icons to the links -->
+                  <li ui-sref="projects"><a href="#"><span>Projects</span></a></li>
+                  <li ui-sref="new-project"><a href="#"><span>New-Project</span></a></li>
+                  <li ui-sref="blog"><a href="#"><span>Blog</span></a></li>
+              </ul><!-- /.sidebar-menu -->
+
+          </div><!-- /.sidebar -->
+      </div><!-- /.main-sidebar -->
+  <div>
+    <div id="content" class="container">
+      <div class="row">
+
+        <div ui-view class="nermin-content">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

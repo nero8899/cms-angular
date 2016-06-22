@@ -57,7 +57,7 @@ module.exports = function () {
 
             if(!err) {
                 res.send(doc);
-            }else{
+            } else{
                 res.status(400).send(err);
             }
 

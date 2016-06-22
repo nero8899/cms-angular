@@ -1,0 +1,25 @@
+<div>
+
+    <h1>Edit project</h1>
+    <hr/>
+    <label>Title</label>
+    <input ng-model="project.title" type="text" class="form-control"/>
+    <br/>
+    <label>Content</label>
+    <textarea ng-model="project.body" class="form-control"></textarea>
+    <br/>
+    <label>Link</label>
+    <input ng-model="project.link" type="text" class="form-control"/>
+    <br/>
+    <label>Author</label>
+    <select
+        ng-model="project.author"
+        ng-options="author.name for author in authors"
+        class="form-control"></select>
+    <br/>
+
+    <img width="100" src="http://localhost:3010/uploads/{{project.coverImage}}">
+
+    <div class="btn btn-success pull-right" ng-disabled="isCreating" ng-click="saveClick()">Save</div>
+
+</div>

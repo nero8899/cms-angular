@@ -9,7 +9,7 @@ module.exports = function(){
     });
 
 };
-/*
+
 server.post('/article', (req, res)=> {
 
     const data = req.body;
@@ -20,4 +20,4 @@ server.post('/article', (req, res)=> {
 
     newArticle.save(function () {
         res.send(newArticle);
-    }*/
+    
