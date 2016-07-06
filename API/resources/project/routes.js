@@ -30,7 +30,7 @@ module.exports = function(){
         const term = req.params.term;
         const Project = mongoose.model('Project');
 
-        console.log(term);
+        console.log(term);git commit -m “Add Readme.txt”
 
         Project.find({title:{$regex: new RegExp(term,'i')}}, function(err, docs){
 
