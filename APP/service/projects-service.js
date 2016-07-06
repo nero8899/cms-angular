@@ -1,6 +1,6 @@
 /* globals confirm */
 
-angular.module('app').factory('projectService',function($http) {
+angular.module('APP').factory('projectService',function($http) {
 
     var projectService = {
         model:{

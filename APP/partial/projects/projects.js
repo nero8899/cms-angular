@@ -1,4 +1,4 @@
-angular.module('app').controller('ProjectsCtrl',function(
+angular.module('APP').controller('ProjectsCtrl',function(
     $scope,
     projectService
 ){

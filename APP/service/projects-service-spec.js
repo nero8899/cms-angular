@@ -1,7 +1,7 @@
 
 describe('projectService', function() {
 
-    beforeEach(module('app'));
+    beforeEach(module('APP'));
 
     it('should ...', inject(function(projectService) {
 

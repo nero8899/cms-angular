@@ -1,4 +1,4 @@
-angular.module('app').controller('EditProjectCtrl',function(
+angular.module('APP').controller('EditProjectCtrl',function(
     $scope,
     projectService,
     $state,
