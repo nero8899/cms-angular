@@ -1,8 +1,5 @@
 const server    = require('../../server').server;
 const mongoose  = require('mongoose');
-const crypto    = require('crypto');
-const mime      = require('mime');
-
 
 
 module.exports = function(){
@@ -30,7 +27,7 @@ module.exports = function(){
         const term = req.params.term;
         const Project = mongoose.model('Project');
 
-        console.log(term);git commit -m “Add Readme.txt”
+        console.log(term);
 
         Project.find({title:{$regex: new RegExp(term,'i')}}, function(err, docs){
 
