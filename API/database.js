@@ -4,7 +4,7 @@ exports.init = function(){
 
     return new Promise(function(resolve, reject){
 
-        mongoose.connect('mongodb://localhost/sae-assignment');
+        mongoose.connect('mongodb://localhost/cms-nermin');
 
         mongoose.connection.on('error', function(err){
 

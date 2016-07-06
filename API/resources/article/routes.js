@@ -9,15 +9,3 @@ module.exports = function(){
     });
 
 };
-
-server.post('/article', (req, res)=> {
-
-    const data = req.body;
-
-    const Article = mongoose.model('Article');
-
-    const newArticle = new Article(data);
-
-    newArticle.save(function () {
-        res.send(newArticle);
-    
