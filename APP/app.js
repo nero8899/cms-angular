@@ -5,7 +5,14 @@ angular.module('APP').config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('projects', {
         url: '/projects',
         templateUrl: 'partial/projects/projects.html',
-        controller: 'ProjectsCtrl'
+        controller: 'ProjectsCtrl',
+        resolve:{
+            projects: function(projectService){
+
+                return projectService.getList();
+
+            }
+        }
     });
     $stateProvider.state('blog', {
         url: '/blog',
@@ -18,8 +25,16 @@ angular.module('APP').config(function($stateProvider, $urlRouterProvider) {
         controller: 'NewProjectCtrl'
     });
     $stateProvider.state('edit-project', {
-        url: '/edit-project',
-        templateUrl: 'partial/edit-project/edit-project.html'
+        url: '/edit-project/:id',
+        templateUrl: 'partial/edit-project/edit-project.html',
+        controller:'EditProjectCtrl',
+        resolve:{
+            project:function(projectService, $stateParams){
+
+                return projectService.getOne($stateParams.id);
+
+            }
+        }
     });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/projects');

@@ -1,22 +1,10 @@
 angular.module('APP').controller('EditProjectCtrl',function(
     $scope,
     projectService,
-    $state,
-    Upload
+    $state
 ){
 
-    $scope.authors = [
-        {
-            name:'Rok'
-        },
-        {
-            name:'Vesoljec'
-        },
-        {
-            name:'Geek'
-        }
-    ];
-
+    $scope.authors = [];
 
 
     $scope.project = projectService.model.item;
