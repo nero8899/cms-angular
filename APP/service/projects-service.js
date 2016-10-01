@@ -1,4 +1,3 @@
-/* globals confirm */
 
 angular.module('APP').factory('projectService',function($http) {
 
