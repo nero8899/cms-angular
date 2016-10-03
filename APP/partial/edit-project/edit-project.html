@@ -15,7 +15,8 @@
     <input
         ng-model="project.author" type="text" class="form-control"/>
     <br/>
-
+    <img width="100" src="http://localhost:3010/uploads/{{project.coverImage}}">
+    <br/>
     <div class="btn btn-success pull-right" ng-disabled="isCreating" ng-click="saveClick()">Save</div>
 
 </div>
